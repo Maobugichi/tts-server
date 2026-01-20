@@ -29,7 +29,7 @@ app.get('/health', (req, res) => {
 
 app.use("/api", voiceRouter);
 
-// Error handling middleware
+
 app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
   console.error('Unhandled error:', err);
   res.status(500).json({
@@ -39,11 +39,11 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 TTS Server running on port ${PORT}`);
+  console.log(`TTS Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   
   if (!process.env.ELEVENLABS_API_KEY) {
-    console.warn('⚠️  Warning: ELEVENLABS_API_KEY not set in environment variables');
+    console.warn('Warning: ELEVENLABS_API_KEY not set in environment variables');
   }
 });
 
