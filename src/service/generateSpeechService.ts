@@ -4,10 +4,6 @@ import { getElevenLabsApiKey } from "../config/env.js";
 const API_KEY = getElevenLabsApiKey();
 
 
-console.log('API Key exists:', !!API_KEY);
-console.log('API Key length:', API_KEY?.length);
-console.log('API Key starts with:', API_KEY?.substring(0, 10));
-
 type OutputFormat = 
   | "mp3_44100_128" 
   | "mp3_44100_192" 

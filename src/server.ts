@@ -1,13 +1,9 @@
-
 import express from 'express';
 import cors from 'cors';
 import { assertEnv } from './config/env.js';
-import voiceRouter from './routes/tts.js'
+import voiceRouter from './routes/tts.js';
 
-
-
-
-assertEnv()
+assertEnv();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
