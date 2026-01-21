@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import generateSpeech from '../service/generateStreamSpeech';
+import generateSpeech from '../service/generateStreamSpeech.js';
 
 export const streamSpeechController = async (req: Request, res: Response) => {
   try {
